@@ -19,7 +19,7 @@ var ContactList = Backbone.View.extend({
     var newContact = new NewContact({'model': contactInfo});
     this.$el.append(newContact.render().el);
   }
-})
+});
 
 var NewContactForm = Backbone.View.extend({
   tagName: 'form',
@@ -36,9 +36,12 @@ var NewContactForm = Backbone.View.extend({
 
   addNewContact: function(event){
     event.preventDefault();
-    this.collection.create({'name': $('#new-contact-name').val(),'email': $('#new-contact-email').val(),
-                    'phone': $('#new-contact-phone').val(), 'twitter': $('#new-contact-twitter').val(),
-                    'linkedin': $('#new-contact-linkedin').val(), 'info': $('#new-contact-info').val()});
+    this.collection.create({'name': $('#new-contact-name').val(),
+          'email': $('#new-contact-email').val(),
+          'phone': $('#new-contact-phone').val(),
+          'twitter': $('#new-contact-twitter').val(),
+          'linkedin': $('#new-contact-linkedin').val(),
+          'info': $('#new-contact-info').val()});
   }
 
 });

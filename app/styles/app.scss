@@ -19,8 +19,9 @@ img {
 .contact-list {
   padding: 0;
 }
-.new-contact-form input {
-  width: 300px;
+.new-contact-form input,
+.new-contact-form textarea {
+  width: 95%;
 }
 
 .new-contact span {
